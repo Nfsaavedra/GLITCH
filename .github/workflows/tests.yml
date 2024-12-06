@@ -29,5 +29,9 @@ jobs:
         run: |
           cd glitch
           python -m unittest discover tests
-      - run: ls /home/runner/work/_actions/Nfsaavedra/workflow-telemetry-action/raw_data/dist/
+      - name: Archive cpu stats
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpu stats
+          path: /home/runner/work/_actions/Nfsaavedra/workflow-telemetry-action/raw_data/dist/cpu-stats.json
 
