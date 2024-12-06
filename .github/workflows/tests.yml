@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: wget https://raw.githubusercontent.com/Nfsaavedra/resource-usage/refs/heads/main/get_usage.py
-      - run: nohup python3 get_usage.py &> usage.out &
+      - run: RUNNER_TRACKING_ID="" && nohup python3 get_usage.py &> usage.out &
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
