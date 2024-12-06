@@ -11,8 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: wget https://raw.githubusercontent.com/Nfsaavedra/resource-usage/refs/heads/main/get_usage.py
-      - run: RUNNER_TRACKING_ID="" && nohup python3 get_usage.py &> usage.out &
+      - name: Collect Workflow Telemetry
+        uses: catchpoint/workflow-telemetry-action@v2
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
@@ -29,4 +29,4 @@ jobs:
         run: |
           cd glitch
           python -m unittest discover tests
-      - run: cat /home/runner/work/GLITCH/GLITCH/usage.out
+
