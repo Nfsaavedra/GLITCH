@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Collect Workflow Telemetry
         uses: Nfsaavedra/workflow-telemetry-action@raw_data
+        with:
+          save_raw_stats: true
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
