@@ -29,4 +29,5 @@ jobs:
         run: |
           cd glitch
           python -m unittest discover tests
+      - run: ls /home/runner/work/_actions/Nfsaavedra/workflow-telemetry-action/raw_data/dist/
 
