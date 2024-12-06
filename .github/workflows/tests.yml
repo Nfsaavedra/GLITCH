@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: wget https://raw.githubusercontent.com/Nfsaavedra/resource-usage/refs/heads/main/get_usage.py
-      - run: pwd
       - run: nohup get_usage.py &> usage.out &
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
@@ -30,4 +29,4 @@ jobs:
         run: |
           cd glitch
           python -m unittest discover tests
-      - run: cat usage.out
+      - run: cat /home/runner/work/GLITCH/GLITCH/usage.out
