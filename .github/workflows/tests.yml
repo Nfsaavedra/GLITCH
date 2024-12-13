@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Collect Workflow Telemetry
-        uses: Nfsaavedra/workflow-telemetry-action@raw_data
+        uses: Nfsaavedra/workflow-telemetry-action@test
         with:
           save_raw_stats: true
       - uses: actions/checkout@v3
